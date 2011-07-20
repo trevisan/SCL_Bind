@@ -9,3 +9,8 @@ qmake
 make 
 
 Alternatively you can load the project (SCL_Bind.pro) with QtCreator IDE.
+
+Dependencies:
+-------------
+XSD: 
+sudo apt-get install xsd
