@@ -1,0 +1,11 @@
+=================
+SCL_Bind Project
+================= 
+
+Instructions to compile project:
+
+cd SCL_Bind/
+qmake     
+make 
+
+Alternatively you can load the project (SCL_Bind.pro) with QtCreator IDE.
