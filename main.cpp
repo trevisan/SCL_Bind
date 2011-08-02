@@ -7,13 +7,29 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 
+    // Get file_name from command line argument
+    string* file_name;
+
+    if (argc != 2)
+    {
+        cout << "Error: wrong number of arguments!" << endl;
+        cout << "Enter 'scl_bind scl_filename' " << endl;
+        return 1;
+    }
+    else
+    {
+        file_name = new string(argv[1]);
+        cout << "==================" << endl;
+        cout << "    SCL_Bind" << endl;
+        cout << "==================" << endl;
+
+    }
+
 
     try
-    {        
-        string file_name = "//home//trevisan//Projects//SCL_Bind//scl_files//RTDS_OK.scd";
-
+    {            
         // Instantiate a SCL object from XML file
-        auto_ptr<SCL::SCL> scl (SCL::SCL_(file_name, xml_schema::flags::dont_validate));
+        auto_ptr<SCL::SCL> scl (SCL::SCL_(*file_name, xml_schema::flags::dont_validate));
 
         cout << scl->Header().id() << endl;
         cout << scl->Header().nameStructure() << endl;

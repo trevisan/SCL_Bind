@@ -3,6 +3,7 @@ SCL_Bind Project
 ================= 
 
 Instructions to compile project:
+--------------------------------
 
 cd SCL_Bind/
 qmake     
@@ -14,3 +15,18 @@ Dependencies:
 -------------
 XSD: 
 sudo apt-get install xsd
+
+
+Instructions to run SCL_Bind:
+-----------------------------
+To parse one file:
+./SCL_Bind filename
+
+To parse every file in a directory tree like this:
++Dir1/
++Dir2/
++Dir3/
+-SCL_Bind   (executable)
+
+find . -iname "*.icd" -exec ./SCL_Bind {} \;
+
